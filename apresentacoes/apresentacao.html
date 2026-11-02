@@ -60,18 +60,7 @@
     }
   </style>
 </head>
-<body class="w-screen h-screen overflow-hidden text-zinc-900 bg-[#FAFAF8] relative">
-
-  <!-- BOTÃO FLUTUANTE DE TELA CHEIA (TOP-RIGHT) -->
-  <button id="btn-fullscreen" title="Alternar Tela Cheia (Tecla F)" class="fixed top-6 right-8 z-50 p-2.5 rounded-xl bg-white/90 hover:bg-white border border-zinc-200 shadow-sm hover:shadow text-zinc-600 hover:text-zinc-950 transition backdrop-blur-sm cursor-pointer flex items-center gap-1.5 text-xs font-semibold">
-    <svg id="icon-expand" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
-    </svg>
-    <svg id="icon-compress" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9L4 4m0 0h5m-5 0v5m11-5l5 5m0-5h-5m5 0v5M9 15l-5 5m0 0h5m-5 0v-5m11 5l5-5m0 5h-5m5 0v-5"/>
-    </svg>
-    <span class="font-mono text-[11px] text-zinc-400">F</span>
-  </button>
+<body class="w-screen h-screen overflow-hidden text-zinc-900 bg-[#FAFAF8]">
 
   <!-- ========================================== -->
   <!-- SLIDE 1: CAPA -->
@@ -87,35 +76,20 @@
 
     <div class="space-y-6 max-w-4xl my-auto">
       <h1 class="text-7xl sm:text-8xl lg:text-9xl font-extrabold tracking-tight text-zinc-950 leading-[0.95]">
-        Byte-a-Byte <span class="text-amber-500 underline decoration-amber-300 underline-offset-8">2.0</span>
+        Byte-a-Byte
       </h1>
-      <p class="text-3xl sm:text-4xl font-bold text-zinc-700 leading-snug">
-        Plataforma Integrada de Ensino
+      <p class="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-600 leading-snug">
+        O Novo Ecossistema Digital de Ensino
       </p>
-
-      <div class="flex flex-wrap gap-3 pt-2">
-        <span class="px-4 py-2 rounded-xl bg-white border border-zinc-200 text-sm font-bold text-zinc-800 shadow-sm">
-          🌐 Portal Oficial
-        </span>
-        <span class="px-4 py-2 rounded-xl bg-white border border-zinc-200 text-sm font-bold text-zinc-800 shadow-sm">
-          ⚡ Código no Navegador
-        </span>
-        <span class="px-4 py-2 rounded-xl bg-white border border-zinc-200 text-sm font-bold text-zinc-800 shadow-sm">
-          📊 Zero Planilhas Manuais
-        </span>
-      </div>
     </div>
 
     <div class="flex items-center justify-between pt-6 border-t border-zinc-200">
       <div class="flex items-center gap-4">
         <img src="https://dsadriel.github.io/portfolio/assets/images/profile.webp" alt="Adriel" class="w-14 h-14 rounded-full object-cover border-2 border-amber-400 shadow-md">
         <div>
-          <p class="text-base font-bold text-zinc-900">Adriel de Souza</p>
+          <p class="text-base font-bold text-zinc-900 leading-tight">Adriel de Souza</p>
           <p class="text-xs sm:text-sm text-zinc-500">Monitor do Byte-a-Byte • Ciência da Computação (UFRGS)</p>
         </div>
-      </div>
-      <div class="text-xs font-mono text-zinc-400">
-        Navegue com <kbd class="px-2.5 py-1 bg-zinc-100 border border-zinc-300 rounded text-zinc-700 font-bold">➜</kbd> ou <kbd class="px-2.5 py-1 bg-zinc-100 border border-zinc-300 rounded text-zinc-700 font-bold">Espaço</kbd>
       </div>
     </div>
   </section>
@@ -741,11 +715,7 @@
       if (currentSlide > 1) updateSlide(currentSlide - 1);
     }
 
-    // Suporte robusto a Fullscreen com fallback para Safari / WebKit no Mac
-    const btnFullscreen = document.getElementById('btn-fullscreen');
-    const iconExpand = document.getElementById('icon-expand');
-    const iconCompress = document.getElementById('icon-compress');
-
+    // Suporte a Fullscreen via Tecla F (WebKit / Safari / Chrome)
     function toggleFullscreen() {
       const doc = document;
       const docEl = document.documentElement;
@@ -774,25 +744,6 @@
         }
       }
     }
-
-    function updateFullscreenIcons() {
-      const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
-      if (isFullscreen) {
-        iconExpand.classList.add('hidden');
-        iconCompress.classList.remove('hidden');
-      } else {
-        iconExpand.classList.remove('hidden');
-        iconCompress.classList.add('hidden');
-      }
-    }
-
-    btnFullscreen.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleFullscreen();
-    });
-
-    document.addEventListener('fullscreenchange', updateFullscreenIcons);
-    document.addEventListener('webkitfullscreenchange', updateFullscreenIcons);
 
     // Navegação por Teclado
     document.addEventListener('keydown', (e) => {
