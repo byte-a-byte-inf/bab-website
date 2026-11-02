@@ -57,7 +57,7 @@ flowchart LR
 * **Gestão da Turma**: Cadastra o período letivo, o cronograma das aulas, os períodos de tarefas e a data da prova final.
 * **Gestão da Equipe de Monitores**: Cadastra os monitores da turma e define a **escala de horários de monitoria** (qual monitor atende em cada dia e faixa de horário no Discord).
 * **Matrícula de Alunos**: Adiciona estudantes individualmente ou importa turmas inteiras via lista/CSV em um clique.
-* **Chamada das Aulas**: Realiza a chamada das aulas presenciais diretamente em uma lista visual simples.
+* **Chamada das Aulas**: Realiza a chamada das aulas online diretamente em uma lista visual simples.
 * **Banco de Exercícios e Prova**: Cria e edita as atividades em formato misto (**questões práticas de código** e **questões objetivas de múltipla escolha**), com funcionalidade de clonar/duplicar de semestres anteriores.
 * **Boletim e Fechamento**: Acompanha o desempenho geral e exporta a planilha final (Nota da Prova + % de Frequência em Aulas + Atendimentos de Monitoria) em formato CSV.
 
@@ -115,7 +115,7 @@ flowchart LR
 * **Registro de Atendimento de Monitoria**:
   * Tela simples para o Monitor assinalar quais alunos compareceram à monitoria no Discord ou marcar que esteve de plantão sem atendimentos.
 * **Chamada Rápida de Aulas**:
-  * Lista de chamada para o Coordenador marcar a presença dos alunos nas aulas presenciais com 1 clique.
+  * Lista de chamada para o Coordenador marcar a presença dos alunos nas aulas online com 1 clique.
 * **Painel de Assiduidade**:
   * Métrica percentual de presença nas aulas (verificação dos 75% obrigatórios).
   * Contagem de participações em monitorias como indicador de engajamento discente.
