@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byte-a-Byte 2.0 — Apresentação da Plataforma Integrada</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              yellow: '#F59E0B',
+              amber: '#D97706',
+              dark: '#B45309',
+              light: '#FEF3C7',
+              bg: '#FFFDF5',
+            },
+            surface: {
+              canvas: '#F8F8F6',
+              card: '#FFFFFF',
+              border: '#E4E4E7',
+              muted: '#71717A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F4F4F1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .slide {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+    
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    /* Aspect Ratio Container 16:9 */
+    .slide-viewport {
+      aspect-ratio: 16 / 9;
+      max-height: 90vh;
+      max-width: 160vh;
+    }
+
+    /* Glow sutil para cards de destaque */
+    .card-highlight {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%);
+      border: 1px solid #FDE68A;
+      box-shadow: 0 4px 20px -2px rgba(245, 158, 11, 0.08);
+    }
+  </style>
+</head>
+<body class="h-screen w-screen flex flex-col items-center justify-center overflow-hidden text-zinc-900">
+
+  <!-- BARRA DE PROGRESSO NO TOPO -->
+  <div class="fixed top-0 left-0 w-full h-1.5 bg-zinc-200 z-50">
+    <div id="progress-bar" class="h-full bg-amber-500 transition-all duration-300 ease-out" style="width: 9%;"></div>
+  </div>
+
+  <!-- CONTAINER PRINCIPAL DO SLIDE (16:9) -->
+  <main class="slide-viewport w-full mx-auto bg-white rounded-2xl shadow-2xl border border-zinc-200/80 overflow-hidden relative flex flex-col justify-between p-12 sm:p-14 lg:p-16">
+    
+    <!-- ========================================== -->
+    <!-- SLIDE 1: CAPA -->
+    <!-- ========================================== -->
+    <section class="slide active flex-col justify-between h-full" data-slide="1">
+      <div class="flex items-center justify-between">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100 text-amber-800 text-xs font-bold tracking-wide uppercase border border-amber-200/60">
+          <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+          Projeto de Extensão • INF / UFRGS
+        </div>
+        <span class="text-xs font-mono font-medium text-zinc-400">Novembro de 2026</span>
+      </div>
+
+      <div class="space-y-4 my-auto">
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-zinc-950 leading-[1.1]">
+          Byte-a-Byte <span class="text-amber-500">2.0</span>
+        </h1>
+        <p class="text-2xl font-semibold text-zinc-600 max-w-2xl leading-snug">
+          Uma Plataforma Integrada de Ensino de Programação
+        </p>
+        <p class="text-base text-zinc-400 max-w-xl">
+          Proposta de modernização, controle pedagógico e centralização do ecossistema digital do curso.
+        </p>
+      </div>
+
+      <div class="flex items-center justify-between pt-6 border-t border-zinc-100">
+        <div>
+          <p class="text-sm font-bold text-zinc-900">Adriel de Souza</p>
+          <p class="text-xs text-zinc-500">Monitor do Byte-a-Byte • Bacharelado em Ciência da Computação (UFRGS)</p>
+        </div>
+        <div class="text-xs text-zinc-400 font-mono flex items-center gap-2">
+          <span>Pressione</span>
+          <kbd class="px-2 py-1 bg-zinc-100 border border-zinc-300 rounded text-zinc-700">➜</kbd>
+          <span>para navegar</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 2: QUEM SOU EU -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="2">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider mb-2">Apresentação</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">Quem sou eu?</h2>
+      </div>
+
+      <div class="grid grid-cols-12 gap-8 my-auto items-stretch">
+        <!-- Coluna Esquerda: Bio Card -->
+        <div class="col-span-5 bg-gradient-to-b from-zinc-50 to-white p-7 rounded-2xl border border-zinc-200/80 flex flex-col justify-between shadow-sm">
+          <div>
+            <h3 class="text-2xl font-bold text-zinc-900">Adriel de Souza</h3>
+            <p class="text-amber-600 font-semibold text-sm mt-0.5">Ciência da Computação — UFRGS</p>
+            <p class="text-sm text-zinc-600 mt-4 leading-relaxed">
+              Atuo diretamente como <strong>monitor do Byte-a-Byte</strong>, acompanhando a rotina dos alunos nas aulas presenciais e nos plantões no Discord.
+            </p>
+          </div>
+          <div class="bg-amber-50/80 border border-amber-200/60 rounded-xl p-4 mt-6">
+            <p class="text-xs text-amber-900 italic leading-relaxed">
+              "O que me move é usar a tecnologia para transformar processos burocráticos em experiências simples, humanas e de alto impacto social."
+            </p>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: 3 Pilares -->
+        <div class="col-span-7 flex flex-col justify-between gap-3">
+          <div class="bg-white p-4 rounded-xl border border-zinc-200/80 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg shrink-0">🌱</div>
+            <div>
+              <h4 class="text-sm font-bold text-zinc-900">Fundo Amanhã (Amanhã Tech)</h4>
+              <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Ex-bolsista do programa <em>Adote um Aluno</em>. Conheço na pele as dores de quem começa a programar do absoluto zero.</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-zinc-200/80 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-lg shrink-0">🍎</div>
+            <div>
+              <h4 class="text-sm font-bold text-zinc-900">Apple Developer Academy (PUCRS)</h4>
+              <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Desenvolvedor de software, liderança de equipes ágeis e participante da <strong>WWDC26 no Apple Park</strong> em Cupertino.</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-zinc-200/80 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg shrink-0">🏛️</div>
+            <div>
+              <h4 class="text-sm font-bold text-zinc-900">Instituto de Informática (UFRGS)</h4>
+              <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Experiência prévia em desenvolvimento web e manutenção das plataformas e portais institucionais do INF.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-xs text-zinc-400 flex items-center gap-2 pt-2 border-t border-zinc-100">
+        <span>Monitoria ativa no projeto com vivência direta nas turmas</span>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 3: O BYTE-A-BYTE HOJE -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="3">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider mb-2">Contexto Atual</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">O Byte-a-Byte Hoje</h2>
+      </div>
+
+      <div class="grid grid-cols-3 gap-6 my-auto">
+        <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-4">🏫</div>
+            <h3 class="text-lg font-bold text-zinc-900">Módulos de Aula</h3>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Encontros presenciais para apresentação dos fundamentos de lógica e sintaxe em Python.</p>
+          </div>
+          <span class="mt-4 text-[11px] font-semibold text-amber-600 uppercase">Aulas Presenciais</span>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4">💬</div>
+            <h3 class="text-lg font-bold text-zinc-900">Plantões no Discord</h3>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Plantões de monitoria ao longo da semana para tirar dúvidas individuais e apoiar nos exercícios.</p>
+          </div>
+          <span class="mt-4 text-[11px] font-semibold text-blue-600 uppercase">Comunidade Virtual</span>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl mb-4">📝</div>
+            <h3 class="text-lg font-bold text-zinc-900">Prova Final</h3>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Avaliação individual no encerramento da turma para mensurar o aproveitamento do curso.</p>
+          </div>
+          <span class="mt-4 text-[11px] font-semibold text-purple-600 uppercase">Fechamento do Ciclo</span>
+        </div>
+      </div>
+
+      <div class="bg-zinc-50 border border-zinc-200/80 rounded-xl p-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          <p class="text-xs text-zinc-700 font-medium">
+            <strong>Presença institucional no ar:</strong> Landing page ativa em <code class="bg-zinc-200/70 px-1.5 py-0.5 rounded text-zinc-800">inf.ufrgs.br/byte-a-byte</code>
+          </p>
+        </div>
+        <span class="text-xs text-zinc-400">Próximo passo: integrar as ferramentas internas</span>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 4: OS GARGALOS REAIS -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="4">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider mb-2">Diagnóstico</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">Onde o modelo atual dói?</h2>
+      </div>
+
+      <div class="grid grid-cols-3 gap-6 my-auto">
+        <div class="bg-red-50/40 p-6 rounded-2xl border border-red-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-red-100 text-red-700 flex items-center justify-center text-2xl mb-4">🌐</div>
+            <h3 class="text-base font-bold text-red-950">Plataforma em Inglês</h3>
+            <p class="text-xs text-zinc-600 mt-2 leading-relaxed">
+              O sistema atual de exercícios em inglês intimida quem nunca viu uma linha de código antes. Gera atrito e desânimo desnecessários.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-red-700 uppercase tracking-wide">Barreira Linguística</span>
+        </div>
+
+        <div class="bg-red-50/40 p-6 rounded-2xl border border-red-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-red-100 text-red-700 flex items-center justify-center text-2xl mb-4">🔒</div>
+            <h3 class="text-base font-bold text-red-950">Sem Controle & Logins Avulsos</h3>
+            <p class="text-xs text-zinc-600 mt-2 leading-relaxed">
+              Alunos criam contas em serviços de terceiros com usernames que não batem com a chamada. Exige trabalho manual exaustivo para validar envios.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-red-700 uppercase tracking-wide">Caixa-Preta</span>
+        </div>
+
+        <div class="bg-red-50/40 p-6 rounded-2xl border border-red-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-red-100 text-red-700 flex items-center justify-center text-2xl mb-4">📊</div>
+            <h3 class="text-base font-bold text-red-950">Fragmentação de Sistemas</h3>
+            <p class="text-xs text-zinc-600 mt-2 leading-relaxed">
+              Código num site, chamada no Google Sheets e monitorias no Discord. No final do semestre, um malabarismo para casar dados.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-red-700 uppercase tracking-wide">Dispersão de Dados</span>
+        </div>
+      </div>
+
+      <div class="text-center py-2 bg-zinc-100/80 rounded-xl border border-zinc-200">
+        <p class="text-xs font-semibold text-zinc-700">
+          ⚠️ <strong>Consequência direta:</strong> Sobrecarga cognitiva no aluno iniciante e esforço operacional excessivo na coordenação.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 5: A PROPOSTA UNIFICADA -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="5">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider mb-2">A Solução</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">Tudo em um só lugar: <code class="text-amber-500 font-mono">bab-website</code></h2>
+      </div>
+
+      <div class="grid grid-cols-3 gap-6 my-auto">
+        <div class="card-highlight p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mb-4">🇧🇷</div>
+            <h3 class="text-base font-bold text-zinc-950">100% em Português</h3>
+            <p class="text-xs text-zinc-600 mt-2 leading-relaxed">
+              Interface amigável, acolhedora e desenhada com baixa carga cognitiva especificamente para quem está aprendendo a programar.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-amber-700 uppercase tracking-wide">Foco em Iniciantes</span>
+        </div>
+
+        <div class="card-highlight p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mb-4">⚡</div>
+            <h3 class="text-base font-bold text-zinc-950">Zero Instalação & Custo Zero</h3>
+            <p class="text-xs text-zinc-600 mt-2 leading-relaxed">
+              O código Python roda diretamente no navegador do aluno via WebAssembly (Pyodide). Sem custos de servidores na nuvem.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-amber-700 uppercase tracking-wide">Escala com Custo Zero</span>
+        </div>
+
+        <div class="card-highlight p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mb-4">🔑</div>
+            <h3 class="text-base font-bold text-zinc-950">Autenticação Nativa</h3>
+            <p class="text-xs text-zinc-600 mt-2 leading-relaxed">
+              O aluno já entra matriculado diretamente na sua turma com seu e-mail. Fim das contas externas e dos usernames confusos.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-amber-700 uppercase tracking-wide">Acesso Direto</span>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-center">
+        <p class="text-xs font-bold text-amber-900">
+          🎯 <strong>Visão:</strong> Da landing page pública à entrega da prova e do boletim em um único endereço institucional do INF.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 6: JORNADA PEDAGÓGICA -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="6">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider mb-2">Pedagogia</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">Formativo vs. Somativo</h2>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 my-auto">
+        <!-- Card Tarefas Semanais -->
+        <div class="bg-white p-7 rounded-2xl border-2 border-emerald-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-zinc-900">Tarefas Semanais</h3>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs uppercase tracking-wider">Formativo</span>
+            </div>
+            <p class="text-sm font-semibold text-emerald-700 mb-3">Foco em errar, testar e aprender sem punição</p>
+            
+            <ul class="space-y-2 text-xs text-zinc-600">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <strong>Sem nota numérica:</strong> indicador é de conclusão (ex: <em>4 de 5 feitas</em>).
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <strong>Formato misto:</strong> perguntas objetivas + exercícios de código prático.
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <strong>Tentativas ilimitadas:</strong> feedback e mensagens de erro na hora.
+              </li>
+            </ul>
+          </div>
+          <p class="text-[11px] text-zinc-400 mt-4 italic">Reduz drasticamente a ansiedade de quem está no início.</p>
+        </div>
+
+        <!-- Card Prova Final -->
+        <div class="bg-white p-7 rounded-2xl border-2 border-amber-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-zinc-900">Prova Final</h3>
+              <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold text-xs uppercase tracking-wider">Somativo</span>
+            </div>
+            <p class="text-sm font-semibold text-amber-700 mb-3">O único momento formal de cálculo de nota</p>
+            
+            <ul class="space-y-2 text-xs text-zinc-600">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <strong>Avaliação oficial:</strong> liberada na data pelo coordenador.
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <strong>Ambiente seguro:</strong> cronômetro regressivo e salvamento contínuo.
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <strong>Correção automática:</strong> testes ocultos e nota instantânea no envio.
+              </li>
+            </ul>
+          </div>
+          <p class="text-[11px] text-zinc-400 mt-4 italic">Auditoria completa do código entregue para os professores.</p>
+        </div>
+      </div>
+
+      <div class="text-xs text-zinc-400 flex items-center justify-between pt-2 border-t border-zinc-100">
+        <span>Tanto as tarefas quanto a prova rodam código diretamente no navegador via WebAssembly</span>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 7: MONITORIAS E FREQUÊNCIA -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="7">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider mb-2">Operação</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">Monitorias & Frequência sem Fricção</h2>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 my-auto">
+        <div class="bg-white p-7 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl mb-4">📅</div>
+            <h3 class="text-lg font-bold text-zinc-900">Escala de Horários no Discord</h3>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
+              Grade visual clara mostrando qual monitor está de plantão em cada dia e horário da semana.
+            </p>
+            <div class="bg-zinc-50 p-3.5 rounded-xl border border-zinc-200 mt-4">
+              <p class="text-xs text-zinc-700 font-medium">
+                💡 <strong>Benefício:</strong> O aluno sabe exatamente quando entrar no Discord para tirar dúvidas. Fim das mensagens perdidas nos chats gerais.
+              </p>
+            </div>
+          </div>
+          <span class="text-[11px] font-bold text-blue-600 uppercase tracking-wide mt-4">Previsibilidade Total</span>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4">✍️</div>
+            <h3 class="text-lg font-bold text-zinc-900">Chamada Rápida em 1 Clique</h3>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
+              Substituição definitiva de formulários avulsos e planilhas paralelas de Google Sheets.
+            </p>
+            <div class="bg-zinc-50 p-3.5 rounded-xl border border-zinc-200 mt-4 space-y-1.5 text-xs text-zinc-700">
+              <p>• <strong>Nas Aulas:</strong> Coordenador abre a turma e marca quem veio.</p>
+              <p>• <strong>Nas Monitorias:</strong> Monitor marca quem atendeu ou registra <em>"Plantão sem comparecimento"</em>.</p>
+            </div>
+          </div>
+          <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-wide mt-4">Adeus Planilhas Avulsas</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-zinc-400 pt-2 border-t border-zinc-100">
+        O extrato de presenças e atendimentos fica visível para o aluno e já alimenta o boletim final.
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 8: PAINEL DA COORDENAÇÃO -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="8">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider mb-2">Coordenação</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">Fechamento do Semestre em 1 Clique</h2>
+      </div>
+
+      <div class="grid grid-cols-3 gap-6 my-auto">
+        <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-4">📥</div>
+            <h3 class="text-base font-bold text-zinc-900">Matrícula em Lote</h3>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
+              Importação de turmas inteiras colando uma lista de e-mails ou subindo uma planilha CSV. Sem digitação individual.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-zinc-400 uppercase">Gestão Ágil</span>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-2xl mb-4">🔄</div>
+            <h3 class="text-base font-bold text-zinc-900">Reaproveitamento</h3>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
+              Construtor de tarefas e prova com recurso de clonar atividades de semestres anteriores em 1 clique.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-zinc-400 uppercase">Economia de Tempo</span>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-4">📊</div>
+            <h3 class="text-base font-bold text-zinc-900">Boletim Consolidado</h3>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
+              Cruzamento automático: <strong>% Presença em Aulas + Atendimentos de Monitoria + Prova</strong> exportados em CSV.
+            </p>
+          </div>
+          <span class="mt-4 text-[11px] font-bold text-zinc-400 uppercase">Relatório Oficial</span>
+        </div>
+      </div>
+
+      <div class="bg-zinc-100/80 rounded-xl p-3 border border-zinc-200 text-center">
+        <p class="text-xs font-semibold text-zinc-700">
+          🚀 <strong>Resultado:</strong> Acaba o retrabalho manual de cruzar notas de plataformas terceiras com planilhas de chamada.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 9: ROADMAP DE EXECUÇÃO -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="9">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider mb-2">Planejamento</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">Roadmap de Execução em 4 Fases</h2>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 my-auto">
+        <div class="bg-white p-5 rounded-2xl border-t-4 border-t-amber-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-extrabold text-amber-600 font-mono">FASE 01</span>
+            <h3 class="text-sm font-bold text-zinc-900 mt-1">Fundação & Portal</h3>
+            <ul class="text-[11px] text-zinc-500 space-y-1.5 mt-3">
+              <li>• Nova Landing Page</li>
+              <li>• Login por Cargo</li>
+              <li>• Turmas e Alunos (CSV)</li>
+            </ul>
+          </div>
+          <span class="text-[10px] text-zinc-400 uppercase font-semibold mt-4">Base Sólida</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border-t-4 border-t-blue-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-extrabold text-blue-600 font-mono">FASE 02</span>
+            <h3 class="text-sm font-bold text-zinc-900 mt-1">Escala & Presença</h3>
+            <ul class="text-[11px] text-zinc-500 space-y-1.5 mt-3">
+              <li>• Escala no Discord</li>
+              <li>• Chamada das Aulas</li>
+              <li>• Registro de Monitoria</li>
+            </ul>
+          </div>
+          <span class="text-[10px] text-zinc-400 uppercase font-semibold mt-4">Rotina Sem Planilhas</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border-t-4 border-t-emerald-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-extrabold text-emerald-600 font-mono">FASE 03</span>
+            <h3 class="text-sm font-bold text-zinc-900 mt-1">Prática de Código</h3>
+            <ul class="text-[11px] text-zinc-500 space-y-1.5 mt-3">
+              <li>• Editor no Navegador</li>
+              <li>• Tarefas Formativas</li>
+              <li>• Questões Objetivas</li>
+            </ul>
+          </div>
+          <span class="text-[10px] text-zinc-400 uppercase font-semibold mt-4">Aprendizado Ativo</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border-t-4 border-t-purple-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-extrabold text-purple-600 font-mono">FASE 04</span>
+            <h3 class="text-sm font-bold text-zinc-900 mt-1">Prova & Boletim</h3>
+            <ul class="text-[11px] text-zinc-500 space-y-1.5 mt-3">
+              <li>• Prova Final com Nota</li>
+              <li>• Gradebook Consolidado</li>
+              <li>• Exportação em CSV</li>
+            </ul>
+          </div>
+          <span class="text-[10px] text-zinc-400 uppercase font-semibold mt-4">Ciclo Completo</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-zinc-400 pt-2 border-t border-zinc-100 flex items-center justify-between">
+        <span>Desenvolvimento modular e incremental focado nas necessidades da próxima turma</span>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 10: PAUTA TÉCNICA E TI DO INF -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="10">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider mb-2">Infraestrutura</span>
+        <h2 class="text-3xl font-extrabold text-zinc-950 tracking-tight">Pauta de TI: Alinhamento com a Rede do INF</h2>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 my-auto">
+        <div class="bg-white p-7 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-bold text-zinc-900">Cenário A: Servidores do INF</h3>
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-zinc-100 text-zinc-700">100% Interno</span>
+            </div>
+            <p class="text-xs text-zinc-500 mb-4">Hospedagem direta na infraestrutura de servidores da UFRGS</p>
+            
+            <ul class="space-y-2 text-xs text-zinc-600">
+              <li>• Validar suporte da TI a <strong>Node.js / Docker</strong> ou ambientes legados (PHP/Apache ou Python).</li>
+              <li>• Provisionamento de banco de dados institucional (PostgreSQL ou MySQL).</li>
+              <li>• Total conformidade com as diretrizes locais da rede.</li>
+            </ul>
+          </div>
+          <span class="text-[11px] text-zinc-400 font-semibold mt-4">Depende da homologação da equipe de redes</span>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-bold text-zinc-900">Cenário B: Nuvem com Apontamento</h3>
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800">Alta Agilidade</span>
+            </div>
+            <p class="text-xs text-zinc-500 mb-4">Aplicação em nuvem gratuita com domínio oficial do INF</p>
+            
+            <ul class="space-y-2 text-xs text-zinc-600">
+              <li>• Hospedagem em serviços modernos gratuitos (Vercel + Supabase/Neon).</li>
+              <li>• <strong>Zero manutenção para a TI do INF:</strong> sem custos de servidores.</li>
+              <li>• Solicitar apenas apontamento de DNS (ex: <em>byte-a-byte.inf.ufrgs.br</em>) ou proxy no nginx.</li>
+            </ul>
+          </div>
+          <span class="text-[11px] text-amber-600 font-semibold mt-4">Solução rápida e independente de suporte interno</span>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-center">
+        <p class="text-xs font-bold text-amber-900">
+          🎯 <strong>Ação de Quinta:</strong> Definir o canal para consultar formalmente a equipe de redes/TI do INF sobre as opções acima.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 11: CONCLUSÃO & DISCUSSÃO -->
+    <!-- ========================================== -->
+    <section class="slide flex-col justify-between h-full" data-slide="11">
+      <div class="flex items-center justify-between">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-wide uppercase">
+          Próximos Passos
+        </div>
+        <span class="text-xs font-mono font-medium text-zinc-400">Byte-a-Byte • INF/UFRGS</span>
+      </div>
+
+      <div class="text-center my-auto space-y-5">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">
+          Vamos construir essa nova fase?
+        </h2>
+        <p class="text-base text-zinc-600 max-w-xl mx-auto leading-relaxed">
+          Uma plataforma própria, acolhedora para quem está começando e sem fricção burocrática para monitores e coordenação.
+        </p>
+
+        <div class="pt-4 flex items-center justify-center gap-4">
+          <div class="px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-200 text-xs font-bold text-zinc-800">
+            Adriel de Souza
+          </div>
+          <div class="px-4 py-2 rounded-xl bg-amber-50 border border-amber-200 text-xs font-mono font-bold text-amber-800">
+            github.com/byte-a-byte-inf/bab-website
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center pt-6 border-t border-zinc-100">
+        <p class="text-sm font-semibold text-zinc-700">Espaço aberto para dúvidas, sugestões e alinhamentos!</p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- BARRA INFERIOR DE CONTROLES E NAVEGAÇÃO -->
+    <!-- ========================================== -->
+    <footer class="flex items-center justify-between pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+      <div class="flex items-center gap-3">
+        <span id="slide-indicator" class="font-mono font-bold text-zinc-700 text-sm">01 / 11</span>
+        <span class="hidden sm:inline text-zinc-300">•</span>
+        <span class="hidden sm:inline text-zinc-500">Byte-a-Byte 2.0</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="btn-prev" class="px-3 py-1.5 rounded-lg bg-zinc-100 hover:bg-zinc-200 text-zinc-700 font-medium transition flex items-center gap-1">
+          <span>‹</span> Anterior
+        </button>
+        <button id="btn-next" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-medium transition flex items-center gap-1 shadow-sm">
+          Próximo <span>›</span>
+        </button>
+        <button id="btn-fullscreen" title="Tela Cheia (F)" class="p-1.5 rounded-lg bg-zinc-100 hover:bg-zinc-200 text-zinc-700 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+          </svg>
+        </button>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- SCRIPT DE NAVEGAÇÃO INTERATIVA -->
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 11;
+
+    const slides = document.querySelectorAll('.slide');
+    const indicator = document.getElementById('slide-indicator');
+    const progressBar = document.getElementById('progress-bar');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const btnFullscreen = document.getElementById('btn-fullscreen');
+
+    function updateSlide(index) {
+      if (index < 1) index = 1;
+      if (index > totalSlides) index = totalSlides;
+      currentSlide = index;
+
+      slides.forEach((slide) => {
+        const slideIndex = parseInt(slide.dataset.slide, 10);
+        if (slideIndex === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      // Atualiza indicador numérico
+      const pad = (n) => n.toString().padStart(2, '0');
+      indicator.textContent = `${pad(currentSlide)} / ${pad(totalSlides)}`;
+
+      // Atualiza barra de progresso
+      const progress = ((currentSlide - 1) / (totalSlides - 1)) * 100;
+      progressBar.style.width = `${Math.max(progress, 6)}%`;
+
+      // Habilita/desabilita botões
+      btnPrev.disabled = currentSlide === 1;
+      btnPrev.style.opacity = currentSlide === 1 ? '0.4' : '1';
+      btnNext.disabled = currentSlide === totalSlides;
+      btnNext.style.opacity = currentSlide === totalSlides ? '0.4' : '1';
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) updateSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) updateSlide(currentSlide - 1);
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    // Eventos de clique
+    btnNext.addEventListener('click', nextSlide);
+    btnPrev.addEventListener('click', prevSlide);
+    btnFullscreen.addEventListener('click', toggleFullscreen);
+
+    // Navegação por teclado
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      } else if (e.key === 'Home') {
+        updateSlide(1);
+      } else if (e.key === 'End') {
+        updateSlide(totalSlides);
+      }
+    });
+
+    // Inicia no slide 1
+    updateSlide(1);
+  </script>
+</body>
+</html>
