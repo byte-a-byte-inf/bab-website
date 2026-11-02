@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Byte-a-Byte 2.0 — Apresentação</title>
-  
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -36,7 +39,8 @@
   </script>
 
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       width: 100vw;
@@ -47,19 +51,20 @@
       user-select: none;
       -webkit-font-smoothing: antialiased;
     }
-    
+
     .slide {
       display: none;
       opacity: 0;
       transition: opacity 0.15s ease-in-out;
     }
-    
+
     .slide.active {
       display: flex;
       opacity: 1;
     }
   </style>
 </head>
+
 <body class="w-screen h-screen overflow-hidden text-zinc-900 bg-[#FAFAF8]">
 
   <!-- ========================================== -->
@@ -67,7 +72,8 @@
   <!-- ========================================== -->
   <section class="slide active w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="1">
     <div class="flex items-center justify-between">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-amber-900 text-xs font-bold tracking-wide uppercase border border-amber-300">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-amber-900 text-xs font-bold tracking-wide uppercase border border-amber-300">
         <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
         Projeto de Extensão • INF / UFRGS
       </div>
@@ -85,7 +91,8 @@
 
     <div class="flex items-center justify-between pt-6 border-t border-zinc-200">
       <div class="flex items-center gap-4">
-        <img src="https://dsadriel.github.io/portfolio/assets/images/profile.webp" alt="Adriel" class="w-14 h-14 rounded-full object-cover border-2 border-amber-400 shadow-md">
+        <img src="https://dsadriel.github.io/portfolio/assets/images/profile.webp" alt="Adriel"
+          class="w-14 h-14 rounded-full object-cover border-2 border-amber-400 shadow-md">
         <div>
           <p class="text-base font-bold text-zinc-900 leading-tight">Adriel de Souza</p>
           <p class="text-xs sm:text-sm text-zinc-500">Ciência da Computação (UFRGS) • Desenvolvedor iOS</p>
@@ -99,19 +106,23 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="2">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Apresentação</span>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Apresentação</span>
       <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Quem sou eu?</h2>
     </div>
 
     <div class="grid grid-cols-12 gap-8 lg:gap-12 my-auto items-stretch">
       <!-- Coluna Esquerda: Foto e Perfil -->
-      <div class="col-span-5 bg-white p-8 lg:p-10 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+      <div
+        class="col-span-5 bg-white p-8 lg:p-10 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
         <div class="flex items-center gap-6">
-          <img src="https://dsadriel.github.io/portfolio/assets/images/profile.webp" alt="Adriel" class="w-32 h-32 lg:w-36 lg:h-36 rounded-3xl object-cover shadow-lg border-2 border-amber-400 shrink-0">
+          <img src="https://dsadriel.github.io/portfolio/assets/images/profile.webp" alt="Adriel"
+            class="w-32 h-32 lg:w-36 lg:h-36 rounded-3xl object-cover shadow-lg border-2 border-amber-400 shrink-0">
           <div>
             <h3 class="text-2xl lg:text-3xl font-extrabold text-zinc-900 leading-tight">Adriel de Souza</h3>
             <p class="text-amber-600 font-bold text-sm lg:text-base mt-1">Ciência da Computação (UFRGS)</p>
-            <span class="inline-block mt-3 px-3.5 py-1 bg-amber-50 text-amber-800 text-xs font-bold rounded-lg border border-amber-200">
+            <span
+              class="inline-block mt-3 px-3.5 py-1 bg-amber-50 text-amber-800 text-xs font-bold rounded-lg border border-amber-200">
               Desenvolvedor iOS
             </span>
           </div>
@@ -127,26 +138,35 @@
       <!-- Coluna Direita: 3 Pilares com Frases Curtas -->
       <div class="col-span-7 flex flex-col justify-between gap-4">
         <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex items-center gap-5">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-bold text-2xl shrink-0">🌱</div>
+          <div
+            class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-bold text-2xl shrink-0">
+            🌱</div>
           <div>
-            <h4 class="text-lg font-bold text-zinc-900">Fundo Amanhã (Amanhã Tech)</h4>
-            <p class="text-sm font-semibold text-zinc-500 mt-0.5">Ex-bolsista <em>Adote um Aluno</em> • Sei o desafio de começar do zero</p>
+            <h4 class="text-lg font-bold text-zinc-900">Fundo Amanhã</h4>
+            <p class="text-sm font-semibold text-zinc-500 mt-0.5">Ex-bolsista <em>Adote um Aluno</em></p>
           </div>
         </div>
 
         <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex items-center gap-5">
-          <div class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center font-bold text-2xl shrink-0">🍎</div>
+          <div
+            class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center font-bold text-2xl shrink-0">
+            🍎</div>
           <div>
             <h4 class="text-lg font-bold text-zinc-900">Apple Developer Academy (PUCRS)</h4>
-            <p class="text-sm font-semibold text-zinc-500 mt-0.5">Desenvolvimento de software & Participante da <strong>WWDC26</strong></p>
+            <p class="text-sm font-semibold text-zinc-500 mt-0.5">Desenvolvimento de software & Participante da
+              <strong>WWDC26</strong>
+            </p>
           </div>
         </div>
 
         <div class="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm flex items-center gap-5">
-          <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center font-bold text-2xl shrink-0">🏛️</div>
+          <div
+            class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center font-bold text-2xl shrink-0">
+            🏛️</div>
           <div>
             <h4 class="text-lg font-bold text-zinc-900">Instituto de Informática (UFRGS)</h4>
-            <p class="text-sm font-semibold text-zinc-500 mt-0.5">Desenvolvimento de plataformas institucionais & interfaces web no INF</p>
+            <p class="text-sm font-semibold text-zinc-500 mt-0.5">Desenvolvimento de plataformas institucionais &
+              interfaces web no INF</p>
           </div>
         </div>
       </div>
@@ -162,7 +182,9 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="3">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Estrutura Atual</span>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Estrutura
+        Atual</span>
       <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">O Byte-a-Byte Hoje</h2>
     </div>
 
@@ -171,9 +193,12 @@
         <div>
           <div class="text-5xl mb-6">💻</div>
           <h3 class="text-2xl font-bold text-zinc-900">Módulos de Aula</h3>
-          <p class="text-base text-zinc-600 mt-3 font-medium">Aulas online ao vivo com fundamentos de lógica e programação em Python.</p>
+          <p class="text-base text-zinc-600 mt-3 font-medium">Aulas online ao vivo com fundamentos de lógica e
+            programação em Python.</p>
         </div>
-        <span class="mt-8 px-3.5 py-1.5 rounded-lg bg-amber-50 text-xs font-bold text-amber-700 uppercase tracking-wide self-start">Aulas Online</span>
+        <span
+          class="mt-8 px-3.5 py-1.5 rounded-lg bg-amber-50 text-xs font-bold text-amber-700 uppercase tracking-wide self-start">Aulas
+          Online</span>
       </div>
 
       <div class="bg-white p-8 lg:p-10 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
@@ -182,7 +207,9 @@
           <h3 class="text-2xl font-bold text-zinc-900">Plantões no Discord</h3>
           <p class="text-base text-zinc-600 mt-3 font-medium">Tirar dúvidas e orientar a resolução dos exercícios.</p>
         </div>
-        <span class="mt-8 px-3.5 py-1.5 rounded-lg bg-indigo-50 text-xs font-bold text-[#5865F2] uppercase tracking-wide self-start">Durante a Semana</span>
+        <span
+          class="mt-8 px-3.5 py-1.5 rounded-lg bg-indigo-50 text-xs font-bold text-[#5865F2] uppercase tracking-wide self-start">Durante
+          a Semana</span>
       </div>
 
       <div class="bg-white p-8 lg:p-10 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
@@ -191,13 +218,15 @@
           <h3 class="text-2xl font-bold text-zinc-900">Prova Final</h3>
           <p class="text-base text-zinc-600 mt-3 font-medium">Avaliação individual e emissão de certificados.</p>
         </div>
-        <span class="mt-8 px-3.5 py-1.5 rounded-lg bg-purple-50 text-xs font-bold text-purple-700 uppercase tracking-wide self-start">Encerramento</span>
+        <span
+          class="mt-8 px-3.5 py-1.5 rounded-lg bg-purple-50 text-xs font-bold text-purple-700 uppercase tracking-wide self-start">Encerramento</span>
       </div>
     </div>
 
     <div class="bg-zinc-100 border border-zinc-200 rounded-2xl p-4 flex items-center justify-between">
       <p class="text-sm font-semibold text-zinc-700">
-        🌐 Landing page institucional ativa: <code class="bg-white px-2 py-0.5 rounded text-amber-700 border border-zinc-200">inf.ufrgs.br/byte-a-byte</code>
+        🌐 Landing page institucional ativa: <code
+          class="bg-white px-2 py-0.5 rounded text-amber-700 border border-zinc-200">inf.ufrgs.br/byte-a-byte</code>
       </p>
       <span class="text-xs font-bold text-zinc-400 uppercase">Falta integrar a operação</span>
     </div>
@@ -208,7 +237,8 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="4">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider mb-2">Diagnóstico</span>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider mb-2">Diagnóstico</span>
       <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Onde dói no modelo atual?</h2>
     </div>
 
@@ -217,7 +247,8 @@
       <div class="bg-red-50/50 p-8 rounded-3xl border border-red-200 flex flex-col justify-between shadow-sm">
         <div>
           <div class="flex items-center justify-between mb-5">
-            <span class="w-12 h-12 rounded-2xl bg-[#00EA64] text-black font-black font-mono flex items-center justify-center text-lg shadow-sm">[H]</span>
+            <span
+              class="w-12 h-12 rounded-2xl bg-[#00EA64] text-black font-black font-mono flex items-center justify-center text-lg shadow-sm">[H]</span>
             <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 font-bold text-xs uppercase">100% Inglês</span>
           </div>
 
@@ -233,7 +264,8 @@
       <div class="bg-red-50/50 p-8 rounded-3xl border border-red-200 flex flex-col justify-between shadow-sm">
         <div>
           <div class="flex items-center justify-between mb-5">
-            <span class="w-12 h-12 rounded-2xl bg-zinc-800 text-white font-bold flex items-center justify-center text-xl">🔑</span>
+            <span
+              class="w-12 h-12 rounded-2xl bg-zinc-800 text-white font-bold flex items-center justify-center text-xl">🔑</span>
             <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 font-bold text-xs uppercase">Sem Vínculo</span>
           </div>
 
@@ -251,7 +283,8 @@
           <div class="flex items-center justify-between mb-5">
             <div class="w-12 h-12 rounded-2xl bg-[#0F9D58] text-white flex items-center justify-center shadow-sm">
               <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6v-2h3v2zm0-4H6v-2h3v2zm0-4H6V7h3v2zm9 8h-7v-2h7v2zm0-4h-7v-2h7v2zm0-4h-7V7h7v2z"/>
+                <path
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6v-2h3v2zm0-4H6v-2h3v2zm0-4H6V7h3v2zm9 8h-7v-2h7v2zm0-4h-7v-2h7v2zm0-4h-7V7h7v2z" />
               </svg>
             </div>
             <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 font-bold text-xs uppercase">Manual</span>
@@ -278,15 +311,19 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="5">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider mb-2">A Solução</span>
-      <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Tudo em um só lugar: <code class="text-amber-500 font-mono">bab-website</code></h2>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider mb-2">A
+        Solução</span>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Tudo em um só lugar: <code
+          class="text-amber-500 font-mono">bab-website</code></h2>
     </div>
 
     <div class="grid grid-cols-12 gap-8 lg:gap-12 my-auto items-center">
       <!-- 3 Pilares com Frases Curtas -->
       <div class="col-span-6 space-y-4">
         <div class="p-6 rounded-2xl bg-white border border-amber-200 shadow-sm flex items-center gap-5">
-          <span class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-3xl shrink-0">🇧🇷</span>
+          <span
+            class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-3xl shrink-0">🇧🇷</span>
           <div>
             <h4 class="text-xl font-bold text-zinc-900">100% em Português</h4>
             <p class="text-sm text-zinc-500 font-medium">Interface acolhedora, desenhada para iniciantes.</p>
@@ -294,7 +331,8 @@
         </div>
 
         <div class="p-6 rounded-2xl bg-white border border-amber-200 shadow-sm flex items-center gap-5">
-          <span class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-3xl shrink-0">⚡</span>
+          <span
+            class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-3xl shrink-0">⚡</span>
           <div>
             <h4 class="text-xl font-bold text-zinc-900">Zero Instalação & Custo Zero</h4>
             <p class="text-sm text-zinc-500 font-medium">Python roda no navegador (WASM). R$ 0 de servidor.</p>
@@ -302,7 +340,8 @@
         </div>
 
         <div class="p-6 rounded-2xl bg-white border border-amber-200 shadow-sm flex items-center gap-5">
-          <span class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-3xl shrink-0">🔑</span>
+          <span
+            class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-3xl shrink-0">🔑</span>
           <div>
             <h4 class="text-xl font-bold text-zinc-900">Login Nativo da Turma</h4>
             <p class="text-sm text-zinc-500 font-medium">Aluno entra direto. Fim das contas de terceiros.</p>
@@ -311,7 +350,8 @@
       </div>
 
       <!-- Mockup do Editor -->
-      <div class="col-span-6 bg-zinc-900 rounded-3xl p-6 shadow-2xl border border-zinc-800 text-white font-mono text-sm">
+      <div
+        class="col-span-6 bg-zinc-900 rounded-3xl p-6 shadow-2xl border border-zinc-800 text-white font-mono text-sm">
         <div class="flex items-center justify-between pb-3 mb-4 border-b border-zinc-800">
           <div class="flex items-center gap-2">
             <span class="w-3.5 h-3.5 rounded-full bg-red-500"></span>
@@ -319,11 +359,13 @@
             <span class="w-3.5 h-3.5 rounded-full bg-green-500"></span>
             <span class="text-xs text-zinc-400 font-sans ml-2">editor_python.py</span>
           </div>
-          <span class="px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-400 text-xs font-bold font-sans">Python 3.11 WASM</span>
+          <span class="px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-400 text-xs font-bold font-sans">Python 3.11
+            WASM</span>
         </div>
 
         <div class="space-y-2 text-zinc-300 text-sm">
-          <p><span class="text-purple-400">nome</span> = <span class="text-amber-400">input</span>(<span class="text-emerald-300">"Nome: "</span>)</p>
+          <p><span class="text-purple-400">nome</span> = <span class="text-amber-400">input</span>(<span
+              class="text-emerald-300">"Nome: "</span>)</p>
           <p><span class="text-purple-400">print</span>(<span class="text-emerald-300">f"Olá, {nome}!"</span>)</p>
         </div>
 
@@ -347,7 +389,8 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="6">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Pedagogia</span>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Pedagogia</span>
       <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Formativo vs. Somativo</h2>
     </div>
 
@@ -357,7 +400,8 @@
         <div>
           <div class="flex items-center justify-between mb-6">
             <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900">Tarefas Semanais</h3>
-            <span class="px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs uppercase tracking-wider">Formativo</span>
+            <span
+              class="px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs uppercase tracking-wider">Formativo</span>
           </div>
 
           <div class="space-y-4 text-base sm:text-lg text-zinc-700 font-semibold">
@@ -390,7 +434,8 @@
         <div>
           <div class="flex items-center justify-between mb-6">
             <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900">Prova Final</h3>
-            <span class="px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 font-bold text-xs uppercase tracking-wider">Somativo</span>
+            <span
+              class="px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 font-bold text-xs uppercase tracking-wider">Somativo</span>
           </div>
 
           <div class="space-y-4 text-base sm:text-lg text-zinc-700 font-semibold">
@@ -429,7 +474,8 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="7">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Operação</span>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Operação</span>
       <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Monitorias & Frequência</h2>
     </div>
 
@@ -493,7 +539,8 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="8">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Coordenação</span>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Coordenação</span>
       <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Fechamento em 1 Clique</h2>
     </div>
 
@@ -504,7 +551,8 @@
           <h3 class="text-2xl font-bold text-zinc-900">Matrícula em Lote</h3>
           <p class="text-base text-zinc-600 mt-3 font-medium">Importação via CSV ou lista de e-mails da turma.</p>
         </div>
-        <span class="mt-8 px-3.5 py-1.5 rounded-lg bg-zinc-100 text-xs font-bold text-zinc-600 uppercase self-start">Sem Cadastro Manual</span>
+        <span class="mt-8 px-3.5 py-1.5 rounded-lg bg-zinc-100 text-xs font-bold text-zinc-600 uppercase self-start">Sem
+          Cadastro Manual</span>
       </div>
 
       <div class="bg-white p-8 lg:p-10 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
@@ -513,7 +561,9 @@
           <h3 class="text-2xl font-bold text-zinc-900">Clonagem de Turmas</h3>
           <p class="text-base text-zinc-600 mt-3 font-medium">Reaproveitar listas e prova do semestre anterior.</p>
         </div>
-        <span class="mt-8 px-3.5 py-1.5 rounded-lg bg-zinc-100 text-xs font-bold text-zinc-600 uppercase self-start">Economia de Tempo</span>
+        <span
+          class="mt-8 px-3.5 py-1.5 rounded-lg bg-zinc-100 text-xs font-bold text-zinc-600 uppercase self-start">Economia
+          de Tempo</span>
       </div>
 
       <div class="bg-white p-8 lg:p-10 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
@@ -522,7 +572,9 @@
           <h3 class="text-2xl font-bold text-zinc-900">Boletim Consolidado</h3>
           <p class="text-base text-zinc-600 mt-3 font-medium">Presença + Monitorias + Prova em CSV para a UFRGS.</p>
         </div>
-        <span class="mt-8 px-3.5 py-1.5 rounded-lg bg-zinc-100 text-xs font-bold text-zinc-600 uppercase self-start">Exportação Pronta</span>
+        <span
+          class="mt-8 px-3.5 py-1.5 rounded-lg bg-zinc-100 text-xs font-bold text-zinc-600 uppercase self-start">Exportação
+          Pronta</span>
       </div>
     </div>
 
@@ -534,70 +586,87 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- SLIDE 9: ROADMAP MODULAR -->
+  <!-- SLIDE 9: ROADMAP MODULAR (GRID 2X2) -->
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="9">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Planejamento</span>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Planejamento</span>
       <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Módulos de Implementação</h2>
     </div>
 
-    <div class="grid grid-cols-4 gap-6 my-auto">
-      <div class="bg-white p-7 rounded-3xl border-t-4 border-t-amber-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
+    <div class="grid grid-cols-2 gap-8 lg:gap-10 my-auto items-stretch">
+      <!-- Módulo 01 -->
+      <div
+        class="bg-white p-7 lg:p-8 rounded-3xl border-l-8 border-l-amber-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-xs font-extrabold text-amber-600 font-mono uppercase">Módulo 01</span>
-          <h3 class="text-xl font-bold text-zinc-900 mt-2">Fundação & Portal</h3>
-          <ul class="text-sm text-zinc-600 font-semibold space-y-2.5 mt-5">
-            <li>• Nova Landing Page</li>
-            <li>• Login por Cargo</li>
-            <li>• Turmas e CSV</li>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs lg:text-sm font-extrabold text-amber-600 font-mono uppercase tracking-wider">Módulo 01</span>
+            <span class="text-xs font-bold text-zinc-400 uppercase">Base Digital</span>
+          </div>
+          <h3 class="text-2xl lg:text-3xl font-extrabold text-zinc-900">Fundação & Portal</h3>
+          <ul class="text-base lg:text-lg text-zinc-700 font-semibold space-y-2.5 mt-4">
+            <li>• Nova Landing Page institucional</li>
+            <li>• Autenticação unificada por cargo</li>
+            <li>• Gestão de turmas e alunos via CSV</li>
           </ul>
         </div>
-        <span class="text-xs text-zinc-400 font-bold uppercase mt-8">Base Digital</span>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border-t-4 border-t-blue-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
+      <!-- Módulo 02 -->
+      <div
+        class="bg-white p-7 lg:p-8 rounded-3xl border-l-8 border-l-blue-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-xs font-extrabold text-blue-600 font-mono uppercase">Módulo 02</span>
-          <h3 class="text-xl font-bold text-zinc-900 mt-2">Escala & Presença</h3>
-          <ul class="text-sm text-zinc-600 font-semibold space-y-2.5 mt-5">
-            <li>• Escala no Discord</li>
-            <li>• Chamada das Aulas</li>
-            <li>• Registro de Monitoria</li>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs lg:text-sm font-extrabold text-blue-600 font-mono uppercase tracking-wider">Módulo 02</span>
+            <span class="text-xs font-bold text-zinc-400 uppercase">Operação</span>
+          </div>
+          <h3 class="text-2xl lg:text-3xl font-extrabold text-zinc-900">Escala & Presença</h3>
+          <ul class="text-base lg:text-lg text-zinc-700 font-semibold space-y-2.5 mt-4">
+            <li>• Escala de horários no Discord</li>
+            <li>• Chamada rápida das aulas online</li>
+            <li>• Registro simples de monitoria</li>
           </ul>
         </div>
-        <span class="text-xs text-zinc-400 font-bold uppercase mt-8">Operação</span>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border-t-4 border-t-emerald-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
+      <!-- Módulo 03 -->
+      <div
+        class="bg-white p-7 lg:p-8 rounded-3xl border-l-8 border-l-emerald-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-xs font-extrabold text-emerald-600 font-mono uppercase">Módulo 03</span>
-          <h3 class="text-xl font-bold text-zinc-900 mt-2">Prática de Código</h3>
-          <ul class="text-sm text-zinc-600 font-semibold space-y-2.5 mt-5">
-            <li>• Editor no Navegador</li>
-            <li>• Tarefas Formativas</li>
-            <li>• Questões Objetivas</li>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs lg:text-sm font-extrabold text-emerald-600 font-mono uppercase tracking-wider">Módulo 03</span>
+            <span class="text-xs font-bold text-zinc-400 uppercase">Aprendizado</span>
+          </div>
+          <h3 class="text-2xl lg:text-3xl font-extrabold text-zinc-900">Prática de Código</h3>
+          <ul class="text-base lg:text-lg text-zinc-700 font-semibold space-y-2.5 mt-4">
+            <li>• Editor Python no navegador (WASM)</li>
+            <li>• Tarefas semanais formativas (sem nota)</li>
+            <li>• Questões conceituais objetivas</li>
           </ul>
         </div>
-        <span class="text-xs text-zinc-400 font-bold uppercase mt-8">Aprendizado</span>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border-t-4 border-t-purple-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
+      <!-- Módulo 04 -->
+      <div
+        class="bg-white p-7 lg:p-8 rounded-3xl border-l-8 border-l-purple-500 border border-zinc-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-xs font-extrabold text-purple-600 font-mono uppercase">Módulo 04</span>
-          <h3 class="text-xl font-bold text-zinc-900 mt-2">Prova & Boletim</h3>
-          <ul class="text-sm text-zinc-600 font-semibold space-y-2.5 mt-5">
-            <li>• Prova Final</li>
-            <li>• Gradebook Geral</li>
-            <li>• Exportação CSV</li>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs lg:text-sm font-extrabold text-purple-600 font-mono uppercase tracking-wider">Módulo 04</span>
+            <span class="text-xs font-bold text-zinc-400 uppercase">Fechamento</span>
+          </div>
+          <h3 class="text-2xl lg:text-3xl font-extrabold text-zinc-900">Prova & Boletim</h3>
+          <ul class="text-base lg:text-lg text-zinc-700 font-semibold space-y-2.5 mt-4">
+            <li>• Prova Final cronometrada (com nota)</li>
+            <li>• Gradebook consolidado da turma</li>
+            <li>• Exportação em CSV para a UFRGS</li>
           </ul>
         </div>
-        <span class="text-xs text-zinc-400 font-bold uppercase mt-8">Fechamento</span>
       </div>
     </div>
 
     <div class="text-sm font-semibold text-zinc-400 pt-4 border-t border-zinc-200 text-center">
-      Arquitetura modular: priorização e fases a definir em conjunto com a coordenação
+      Arquitetura modular: priorização e marcos a definir em conjunto com a coordenação
     </div>
   </section>
 
@@ -606,7 +675,8 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="10">
     <div>
-      <span class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Infraestrutura</span>
+      <span
+        class="inline-block px-3.5 py-1 rounded-full bg-zinc-200/70 text-zinc-700 text-xs font-bold uppercase tracking-wider mb-2">Infraestrutura</span>
       <h2 class="text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight">Hospedagem no INF-UFRGS</h2>
     </div>
 
@@ -656,7 +726,8 @@
   <!-- ========================================== -->
   <section class="slide w-full h-full px-16 py-12 lg:px-24 lg:py-16 flex-col justify-between" data-slide="11">
     <div class="flex items-center justify-between">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-wide uppercase">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-wide uppercase">
         Próximos Passos
       </div>
       <span class="text-sm font-mono font-medium text-zinc-400">Byte-a-Byte • INF/UFRGS</span>
@@ -671,8 +742,10 @@
       </p>
 
       <div class="pt-4 flex items-center justify-center">
-        <div class="flex items-center gap-3.5 px-7 py-3.5 rounded-2xl bg-white border border-zinc-200 text-base font-bold text-zinc-800 shadow-sm">
-          <img src="https://dsadriel.github.io/portfolio/assets/images/profile.webp" alt="Adriel" class="w-10 h-10 rounded-full object-cover border border-amber-400">
+        <div
+          class="flex items-center gap-3.5 px-7 py-3.5 rounded-2xl bg-white border border-zinc-200 text-base font-bold text-zinc-800 shadow-sm">
+          <img src="https://dsadriel.github.io/portfolio/assets/images/profile.webp" alt="Adriel"
+            class="w-10 h-10 rounded-full object-cover border border-amber-400">
           <div>
             <p class="text-base font-bold text-zinc-900 leading-tight">Adriel de Souza</p>
             <p class="text-xs text-zinc-500 font-medium">Ciência da Computação (UFRGS) • Desenvolvedor iOS</p>
@@ -724,7 +797,7 @@
 
       if (!isFullscreen) {
         if (docEl.requestFullscreen) {
-          docEl.requestFullscreen().catch(() => {});
+          docEl.requestFullscreen().catch(() => { });
         } else if (docEl.webkitRequestFullscreen) {
           docEl.webkitRequestFullscreen();
         } else if (docEl.mozRequestFullScreen) {
@@ -734,7 +807,7 @@
         }
       } else {
         if (doc.exitFullscreen) {
-          doc.exitFullscreen().catch(() => {});
+          doc.exitFullscreen().catch(() => { });
         } else if (doc.webkitExitFullscreen) {
           doc.webkitExitFullscreen();
         } else if (doc.mozCancelFullScreen) {
@@ -774,4 +847,5 @@
     updateSlide(1);
   </script>
 </body>
+
 </html>
